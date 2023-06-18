@@ -8,7 +8,7 @@
 
 <style>
     body{
-        padding: 50px 100px;
+        padding: 0px 100px;
         color: rgb(225, 212, 24);
     }
     h1{
@@ -22,6 +22,7 @@
     #textbox{
         width: 99.3%;
         border-color:#0067B0;
+        font-size: 20px;
     }
     p{
         text-align: center;
@@ -32,6 +33,7 @@
         padding: 10px;
         margin: 0px;
     }
+
 </style>
 <body>
     <h1> Word and character counter</h1>
@@ -41,6 +43,21 @@
         <span id="char"> 0</span> characters
     </p>
 
+    <script>
+        let textbox = document.getElementById("textbox");
+
+        textbox.addEventListener('input', function(){
+            var text = this.value;
+            let char = text.length;
+            document.getElementById("char").innerHTML = char;
+           
+
+            let word = text.split(" ");
+            console.log(words);
+            document.getElementById("word").innerHTML = words.length;
+            
+        });
+    </script>
     
 </body>
 </html>
